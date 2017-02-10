@@ -1,2 +1,2 @@
-## Boilerplate React JS
+## React Timer App
 ===
