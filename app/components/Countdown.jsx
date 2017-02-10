@@ -8,6 +8,9 @@ const STARTED = 'started';
 const PAUSED = 'paused';
 
 var Countdown = React.createClass({
+  getDefaultProps: function () {
+    return {interval: 1000}
+  },
   getInitialState: function() {
     return {
       count: 0,
@@ -46,7 +49,7 @@ var Countdown = React.createClass({
         return;
       }
       this.setState({count: newCount});
-    }, 1000);
+    }, this.props.interval);
   },
   handleSetCountdown: function(seconds) {
     this.setState({
